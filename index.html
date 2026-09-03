@@ -44,21 +44,30 @@
     .nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
     .nav a:hover { color: #d99b00; }
 
-    /* メインビジュアル */
+    /* メインビジュアル（アップロード画像 header.jp.jpg を背景に指定） */
     .hero {
       margin-top: 80px;
-      padding: 120px 0 100px;
-      background: linear-gradient(135deg, #fdfbf7 0%, #f4efe6 100%);
+      padding: 140px 0 120px;
+      background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('header.jp.jpg');
+      background-size: cover;
+      background-position: center;
       text-align: center;
     }
     .hero h2 {
       font-size: 2.2rem;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.5;
       margin-bottom: 20px;
       letter-spacing: 0.05em;
+      color: #1a1a1a;
+      text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
     }
-    .hero p { font-size: 1.1rem; color: #666; }
+    .hero p {
+      font-size: 1.1rem;
+      color: #333;
+      font-weight: 500;
+      text-shadow: 0 1px 5px rgba(255, 255, 255, 0.9);
+    }
 
     /* セクション共通 */
     .section { padding: 90px 0; border-bottom: 1px solid #f0f0f0; }
@@ -139,6 +148,7 @@
       .header-inner { flex-direction: column; height: auto; padding: 15px 0; }
       .logo { margin-bottom: 10px; text-align: center; }
       .nav ul { gap: 15px; }
+      .hero { padding: 100px 0 80px; }
       .hero h2 { font-size: 1.5rem; }
       .company-table th, .company-table td { display: block; width: 100%; }
       .company-table th { background-color: #f0f0f0; padding: 10px 20px; }
