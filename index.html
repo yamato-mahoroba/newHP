@@ -32,20 +32,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 90px; /* ロゴ拡大に伴いヘッダー高さを調整 */
+      height: 160px; /* ロゴ拡大に伴いヘッダー高さを調整 */
     }
     .logo a {
       display: block;
-      cursor: pointer; /* カーソルを確実に指マーク（ポインター）にする */
+      cursor: pointer;
     }
     .logo img {
-      height: 75px; /* ロゴサイズを1.5倍（50px → 75px）に拡大 */
+      height: 150px; /* ロゴサイズを前回の2倍（75px → 150px）に拡大 */
       width: auto;
       display: block;
       transition: opacity 0.3s;
     }
     .logo a:hover img {
-      opacity: 0.8; /* ホバー時に少し透明にして押しやすく */
+      opacity: 0.8;
     }
     .nav ul { display: flex; list-style: none; gap: 30px; }
     .nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
@@ -53,7 +53,7 @@
 
     /* メインビジュアル */
     .hero {
-      margin-top: 90px;
+      margin-top: 160px; /* ヘッダー高さに合わせて調整 */
       padding: 140px 0 120px;
       background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('header.jp.jpg');
       background-size: cover;
@@ -167,8 +167,8 @@
     /* レスポンシブ（スマホ対応） */
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
-      .logo img { height: 55px; } /* スマホ表示時のロゴサイズ */
-      .hero { margin-top: 120px; padding: 100px 0 80px; text-align: center; }
+      .logo img { height: 80px; } /* スマホ表示時のロゴサイズ */
+      .hero { margin-top: 140px; padding: 100px 0 80px; text-align: center; }
       .nav ul { gap: 15px; }
       .hero-content { max-width: 100%; }
       .hero h2 { font-size: 1.2rem; }
