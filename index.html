@@ -34,12 +34,11 @@
       align-items: center;
       height: 80px;
     }
-    .logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
+    .logo img {
+      height: 50px; /* ヘッダー内のロゴの高さ */
+      width: auto;
+      display: block;
     }
-    .logo span { font-size: 0.8rem; color: #888; display: block; font-weight: 400; }
     .nav ul { display: flex; list-style: none; gap: 30px; }
     .nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
     .nav a:hover { color: #d99b00; }
@@ -67,7 +66,7 @@
     }
     .hero h2 .nowrap {
       display: inline-block;
-      white-space: nowrap; /* 「人々の健やかな暮らしに貢献します。」を途中で折り返さない */
+      white-space: nowrap;
     }
     .hero p {
       font-size: 1.1rem;
@@ -139,7 +138,14 @@
       border-radius: 8px;
     }
     .contact-wrapper p { margin-bottom: 20px; font-size: 1.05rem; }
-    .tel-number { font-size: 1.8rem; font-weight: bold; color: #d99b00; }
+    .tel-number { font-size: 1.8rem; font-weight: bold; color: #d99b00; margin-bottom: 30px; }
+    .contact-logo img {
+      max-width: 280px; /* TEL番号下のロゴサイズ（大きめ） */
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto; /* 中央揃え */
+    }
 
     /* フッター */
     .footer {
@@ -152,15 +158,16 @@
 
     /* レスポンシブ（スマホ対応） */
     @media (max-width: 768px) {
-      .header-inner { flex-direction: column; height: auto; padding: 15px 0; }
-      .logo { margin-bottom: 10px; text-align: center; }
+      .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+      .logo img { height: 40px; }
       .nav ul { gap: 15px; }
       .hero { padding: 100px 0 80px; text-align: center; }
       .hero-content { max-width: 100%; }
       .hero h2 { font-size: 1.2rem; }
-      .hero h2 .nowrap { white-space: normal; } /* スマホ画面の幅を超える場合は自然な折り返しを許可 */
+      .hero h2 .nowrap { white-space: normal; }
       .company-table th, .company-table td { display: block; width: 100%; }
       .company-table th { background-color: #f0f0f0; padding: 10px 20px; }
+      .contact-logo img { max-width: 200px; }
     }
   </style>
 </head>
@@ -170,8 +177,7 @@
   <header class="header">
     <div class="container header-inner">
       <div class="logo">
-        大和まほろば製薬株式会社
-        <span>Yamato Mahoroba Pharmaceutical Co., Ltd.</span>
+        <a href="#"><img src="logo.png" alt="大和まほろば製薬"></a>
       </div>
       <nav class="nav">
         <ul>
@@ -234,7 +240,7 @@
         </tr>
         <tr>
           <th>設立年月日</th>
-          <td>2025年9月8日</td>
+          <td><!-- 設立年月日が決定次第記載 --></td>
         </tr>
       </table>
     </div>
@@ -247,6 +253,9 @@
       <div class="contact-wrapper">
         <p>製品や事業に関するお問い合わせ・ご相談は、下記お電話にて承っております。</p>
         <div class="tel-number">TEL: 0745-22-4152</div>
+        <div class="contact-logo">
+          <img src="logo.png" alt="大和まほろば製薬">
+        </div>
       </div>
     </div>
   </section>
