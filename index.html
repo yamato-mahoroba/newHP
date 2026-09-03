@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大和まほろば製薬株式会社</title>
+  <meta name="description" content="大和まほろば製薬株式会社の公式ウェブサイトです。">
+  <style>
+    /* 基本設定 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: #2b2b2b;
+      line-height: 1.8;
+      background-color: #ffffff;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
+
+    /* ヘッダー */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .logo span { font-size: 0.8rem; color: #888; display: block; font-weight: 400; }
+    .nav ul { display: flex; list-style: none; gap: 30px; }
+    .nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+    .nav a:hover { color: #d99b00; }
+
+    /* メインビジュアル */
+    .hero {
+      margin-top: 80px;
+      padding: 120px 0 100px;
+      background: linear-gradient(135deg, #fdfbf7 0%, #f4efe6 100%);
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+    .hero p { font-size: 1.1rem; color: #666; }
+
+    /* セクション共通 */
+    .section { padding: 90px 0; border-bottom: 1px solid #f0f0f0; }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+      letter-spacing: 0.05em;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #d99b00;
+      margin-top: 10px;
+    }
+
+    /* 事業内容 */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: #fafafa;
+      padding: 35px 30px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
+    .service-card h3 { font-size: 1.25rem; margin-bottom: 15px; color: #111; }
+    .service-card p { font-size: 0.95rem; color: #555; }
+    .service-card .sub-text {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #666;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      border-left: 3px solid #d99b00;
+    }
+
+    /* 会社概要テーブル */
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .company-table th, .company-table td {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    .company-table th { width: 25%; font-weight: 600; color: #555; background-color: #fafafa; }
+
+    /* お問い合わせ */
+    .contact-wrapper {
+      text-align: center;
+      background-color: #fdfbf7;
+      padding: 50px 20px;
+      border-radius: 8px;
+    }
+    .contact-wrapper p { margin-bottom: 20px; font-size: 1.05rem; }
+    .tel-number { font-size: 1.8rem; font-weight: bold; color: #d99b00; }
+
+    /* フッター */
+    .footer {
+      background: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.85rem;
+    }
+
+    /* レスポンシブ（スマホ対応） */
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; height: auto; padding: 15px 0; }
+      .logo { margin-bottom: 10px; text-align: center; }
+      .nav ul { gap: 15px; }
+      .hero h2 { font-size: 1.5rem; }
+      .company-table th, .company-table td { display: block; width: 100%; }
+      .company-table th { background-color: #f0f0f0; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        大和まほろば製薬株式会社
+        <span>Yamato Mahoroba Pharmaceutical Co., Ltd.</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">事業内容</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <div class="container">
+      <h2>信頼される品質で、<br>人々の健やかな暮らしに貢献します。</h2>
+      <p>大和まほろば製薬株式会社の公式ウェブサイトです。</p>
+    </div>
+  </section>
+
+  <!-- 事業内容 -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">SERVICE</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>医薬品・医薬部外品の製造販売業</h3>
+          <p>大和まほろば製薬株式会社は、医薬品・医薬部外品の製造販売業許可を取得し、高品質で安心・安全な製品をお届けしています。</p>
+          <p class="sub-text">※製造工程におきましては、グループ企業である「寧薬化学工業株式会社」の確かな技術と製造ラインにて連携・生産を行っております。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 会社概要 -->
+  <section id="company" class="section">
+    <div class="container">
+      <h2 class="section-title">COMPANY</h2>
+      <table class="company-table">
+        <tr>
+          <th>会社名</th>
+          <td>大和まほろば製薬株式会社</td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td>〒639-2131 奈良県葛城市新村43番地1</td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td>0745-22-4152</td>
+        </tr>
+        <tr>
+          <th>事業内容</th>
+          <td>医薬品、医薬部外品の製造販売</td>
+        </tr>
+        <tr>
+          <th>関連会社</th>
+          <td>寧薬化学工業株式会社（製造元）</td>
+        </tr>
+        <tr>
+          <th>設立年月日</th>
+          <td><!-- 設立年月日が決定次第記載 --></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">CONTACT</h2>
+      <div class="contact-wrapper">
+        <p>製品や事業に関するお問い合わせ・ご相談は、下記お電話にて承っております。</p>
+        <div class="tel-number">TEL: 0745-22-4152</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 大和まほろば製薬株式会社 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
