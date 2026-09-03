@@ -44,26 +44,27 @@
     .nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
     .nav a:hover { color: #d99b00; }
 
-    /* メインビジュアル（左寄せ・レイアウト調整） */
+    /* メインビジュアル（1行表示調整） */
     .hero {
       margin-top: 80px;
       padding: 140px 0 120px;
       background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('header.jp.jpg');
       background-size: cover;
       background-position: center;
-      text-align: left; /* 文字を左寄せに変更 */
+      text-align: left;
     }
     .hero-content {
-      max-width: 550px; /* 左側のぼかしエリア（幅550px）の中に文字を収める */
+      max-width: 650px;
     }
     .hero h2 {
-      font-size: 2.2rem;
+      font-size: 1.8rem; /* 1行に収まるよう文字サイズを微調整 */
       font-weight: 700;
       line-height: 1.5;
       margin-bottom: 20px;
       letter-spacing: 0.05em;
       color: #1a1a1a;
       text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
+      white-space: nowrap; /* テキストの改行を禁止 */
     }
     .hero p {
       font-size: 1.1rem;
@@ -153,7 +154,7 @@
       .nav ul { gap: 15px; }
       .hero { padding: 100px 0 80px; text-align: center; }
       .hero-content { max-width: 100%; }
-      .hero h2 { font-size: 1.5rem; }
+      .hero h2 { font-size: 1.2rem; white-space: normal; } /* スマホでは崩れないよう自動改行を許可 */
       .company-table th, .company-table td { display: block; width: 100%; }
       .company-table th { background-color: #f0f0f0; padding: 10px 20px; }
     }
@@ -182,7 +183,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h2>信頼される品質で、<br>人々の健やかな暮らしに貢献します。</h2>
+        <h2>信頼される品質で、人々の健やかな暮らしに貢献します。</h2>
         <p>大和まほろば製薬株式会社の公式ウェブサイトです。</p>
       </div>
     </div>
