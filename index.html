@@ -32,12 +32,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 80px;
+      height: 90px; /* ロゴ拡大に伴いヘッダー高さを調整 */
+    }
+    .logo a {
+      display: block;
+      cursor: pointer; /* カーソルを確実に指マーク（ポインター）にする */
     }
     .logo img {
-      height: 50px; /* ヘッダー内のロゴの高さ */
+      height: 75px; /* ロゴサイズを1.5倍（50px → 75px）に拡大 */
       width: auto;
       display: block;
+      transition: opacity 0.3s;
+    }
+    .logo a:hover img {
+      opacity: 0.8; /* ホバー時に少し透明にして押しやすく */
     }
     .nav ul { display: flex; list-style: none; gap: 30px; }
     .nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
@@ -45,7 +53,7 @@
 
     /* メインビジュアル */
     .hero {
-      margin-top: 80px;
+      margin-top: 90px;
       padding: 140px 0 120px;
       background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('header.jp.jpg');
       background-size: cover;
@@ -140,11 +148,11 @@
     .contact-wrapper p { margin-bottom: 20px; font-size: 1.05rem; }
     .tel-number { font-size: 1.8rem; font-weight: bold; color: #d99b00; margin-bottom: 30px; }
     .contact-logo img {
-      max-width: 280px; /* TEL番号下のロゴサイズ（大きめ） */
+      max-width: 280px;
       width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto; /* 中央揃え */
+      margin: 0 auto;
     }
 
     /* フッター */
@@ -159,9 +167,9 @@
     /* レスポンシブ（スマホ対応） */
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
-      .logo img { height: 40px; }
+      .logo img { height: 55px; } /* スマホ表示時のロゴサイズ */
+      .hero { margin-top: 120px; padding: 100px 0 80px; text-align: center; }
       .nav ul { gap: 15px; }
-      .hero { padding: 100px 0 80px; text-align: center; }
       .hero-content { max-width: 100%; }
       .hero h2 { font-size: 1.2rem; }
       .hero h2 .nowrap { white-space: normal; }
@@ -177,7 +185,7 @@
   <header class="header">
     <div class="container header-inner">
       <div class="logo">
-        <a href="#"><img src="logo.png" alt="大和まほろば製薬"></a>
+        <a href="index.html"><img src="logo.png" alt="大和まほろば製薬"></a>
       </div>
       <nav class="nav">
         <ul>
